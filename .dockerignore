@@ -1,0 +1,6 @@
+node_modules
+dist
+work/*.log
+work/*-db.json
+outputs
+.git

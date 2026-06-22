@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: meta-prato
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: node server.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: meta-prato-data
+      mountPath: /var/data
+      sizeGB: 1
